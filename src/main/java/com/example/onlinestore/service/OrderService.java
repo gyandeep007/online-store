@@ -16,7 +16,7 @@ public class OrderService {
     }
 
 
-    public Order getCustomerById(Long orderId){
+    public Order getOrderById(Long orderId){
         if(orderId == null)
             throw new IllegalArgumentException("order id is not valid");
 
@@ -24,7 +24,7 @@ public class OrderService {
         return orderRepository.findById(orderId).get();
     }
 
-    public List<Order> getCustomerList(){
+    public List<Order> getOrderList(){
 
         return orderRepository.findAll();
     }
